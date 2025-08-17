@@ -1,37 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mi página con detección de dispositivo</title>
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-        }
-        #miIframe {
-            width: 100%;
-            border: none;
-        }
-    </style>
-</head>
-<body>
-    <iframe id="miIframe" src="https://danielgradosf.wixsite.com/principal"></iframe>
-
+    <title>Redirección automática</title>
     <script>
-        // Detectar si es móvil o PC
-        function esDispositivoMovil() {
-            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent);
-        }
-
-        const iframe = document.getElementById('miIframe');
-
-        if (esDispositivoMovil()) {
-            // Si es móvil, ajusta la altura del iframe
-            iframe.style.height = '100vh'; // ocupa toda la vista
-        } else {
-            // Si es PC, puedes poner otra altura o tamaño
-            iframe.style.height = '700px'; // por ejemplo
+        // Cuando la página cargue, redirige a la URL de tu Wix
+        window.onload = function() {
+            window.location.href = "https://danielgradosf.wixsite.com/principal";
         }
     </script>
+</head>
+<body>
+    <p>Redireccionando a mi página Wix...</p>
 </body>
 </html>
