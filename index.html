@@ -1,21 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Daniel Grados</title>
+    <title>Mi página con detección de dispositivo</title>
     <style>
         html, body {
             margin: 0;
             padding: 0;
             height: 100%;
         }
-        iframe {
-            width: 200%;
-            height: 100%;
+        #miIframe {
+            width: 100%;
             border: none;
         }
     </style>
 </head>
 <body>
-    <iframe src="https://danielgradosf.wixsite.com/principal"></iframe>
+    <iframe id="miIframe" src="https://danielgradosf.wixsite.com/principal"></iframe>
+
+    <script>
+        // Detectar si es móvil o PC
+        function esDispositivoMovil() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent);
+        }
+
+        const iframe = document.getElementById('miIframe');
+
+        if (esDispositivoMovil()) {
+            // Si es móvil, ajusta la altura del iframe
+            iframe.style.height = '100vh'; // ocupa toda la vista
+        } else {
+            // Si es PC, puedes poner otra altura o tamaño
+            iframe.style.height = '700px'; // por ejemplo
+        }
+    </script>
 </body>
 </html>
