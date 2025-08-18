@@ -9,25 +9,13 @@ body {
     text-align: center;
 }
 
-/* Estilos para el encabezado y el pie de página */
-header, footer {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
-    margin: 0;
-}
-
-header h1 {
-    margin: 0;
-}
-
 main {
     padding: 2rem;
 }
 
 /* --- Estilos para el iframe y su contenedor --- */
 
-/* Contenedor principal que mantiene la proporción del iframe */
+/* Contenedor del iframe */
 .wix-container {
     position: relative;
     /* La altura de este contenedor será el 56.25% de su ancho, 
@@ -49,11 +37,13 @@ main {
     border: 0; /* Esto elimina el borde predeterminado del iframe */
 }
 
-/* Opcional: Estilos para dispositivos móviles */
+/* Media query para dispositivos móviles */
 @media (max-width: 768px) {
     .wix-container {
-        /* En pantallas más pequeñas, ajustamos la proporción para que 
-        la altura sea un 75% del ancho, lo que es una proporción 4:3. */
-        padding-bottom: 75%; 
+        /* Para móviles, establecemos el alto en píxeles para que se vea completo.
+           Puedes ajustar este valor (por ejemplo, 1500px, 2000px, etc.)
+           para que se adapte a tu contenido. */
+        padding-bottom: 0;
+        height: 1200px;
     }
 }
