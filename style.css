@@ -38,7 +38,7 @@ main {
 }
 
 /* Media query para dispositivos móviles */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .wix-container {
         /* Para móviles, establecemos el alto en píxeles para que se vea completo.
            Puedes ajustar este valor (por ejemplo, 1500px, 2000px, etc.)
