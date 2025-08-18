@@ -1,60 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        #contenido {
-            padding: 20px;
-            border: 1px solid #ccc;
-            margin-top: 20px;
-        }
-
-        button {
-            margin-right: 10px;
-            padding: 8px 12px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-    </style>
-    <script>
-        // Función para cargar contenido desde un archivo HTML externo
-        function cargarPagina(nombreArchivo, titulo) {
-            fetch(nombreArchivo)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Error cargando ' + nombreArchivo);
-                    }
-                    return response.text();
-                })
-                .then(html => {
-                    document.getElementById('contenido').innerHTML = html;
-                    document.title = titulo;
-                })
-                .catch(error => {
-                    document.getElementById('contenido').innerHTML = '<p>Error al cargar contenido.</p>';
-                    document.title = "Error";
-                    console.error(error);
-                });
-        }
-
-        // Carga automática al cargar la página
-        window.onload = function() {
-            cargarPagina('https://danielgradosf.wixsite.com/principal', 'Página 1');
-        }
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>SPA con carga automática</h1>
-    <!-- Opcional: botones para cargar otras páginas -->
-    <!--
-    <button onclick="cargarPagina('pagina1.html', 'Página 1')">Cargar Página 1</button>
-    <button onclick="cargarPagina('pagina2.html', 'Página 2')">Cargar Página 2</button>
-    -->
-    <div id="contenido">
-        <!-- Aquí se cargará automáticamente el contenido -->
-    </div>
+
+    <main>
+        <div class="wix-container">
+            <iframe src="https://danielgradosf.wixsite.com/principal" class="wix-iframe"></iframe>
+        </div>
+    </main>
+    
 </body>
 </html>
